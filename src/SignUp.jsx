@@ -3,6 +3,8 @@ import { useNavigate } from "react-router";
 import app from "./base";
 
 const SignUp = ({ history }) => {
+  const navigate = useNavigate()
+  
   const handleSignUp = useCallback(async event => {
     event.preventDefault();
     const { email, password } = event.target.elements;
@@ -34,4 +36,4 @@ const SignUp = ({ history }) => {
   );
 };
 
-export default useNavigate(SignUp);
+export default SignUp;

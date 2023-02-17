@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import { Route, Navigate } from "react-router";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { AuthContext } from "./Auth";
 
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
   const {currentUser} = useContext(AuthContext);
   return (
+    <Routes>
     <Route
       {...rest}
       render={routeProps =>
@@ -14,7 +15,7 @@ const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
           <Navigate to={"/login"} />
         )
       }
-    />
+    />\</Routes>
   );
 };
 

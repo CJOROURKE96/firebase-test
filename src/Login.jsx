@@ -5,6 +5,7 @@ import app from "./base.js";
 import { AuthContext } from "./Auth.js";
 
 const Login = ({ history }) => {
+  const navigate = useNavigate()
   const handleLogin = useCallback(
     async event => {
       event.preventDefault();
@@ -45,4 +46,4 @@ const Login = ({ history }) => {
   );
 };
 
-export default useNavigate(Login);
+export default Login;
